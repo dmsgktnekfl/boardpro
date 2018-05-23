@@ -26,6 +26,8 @@ public class InsertCateServlet extends HttpServlet {
     }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=utf-8");
 		HttpSession session = request.getSession();
 		String cate_mem_id = session.getAttribute("cate_mem_id")+"";
 		String cate_title = request.getParameter("cate_title");
